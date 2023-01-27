@@ -1,9 +1,4 @@
-body{
-  background-color: white;
-  height: 100vh;
-  overflow-y: scroll;
-  box-sizing: border-box;
-}
+
 .App {
   text-align: center;
   /* background-color: rgb(182, 0, 0); */
