@@ -161,13 +161,13 @@ const Navbar = () => {
       <div className="navbar-end">
         <Link
           to="/"
-          className="px-5 py-3 rounded font-semibold text-green-600 text-2xl mx-2 hover:bg-green-600 hover:text-white "
+          className="p-2 lg:px-5 lg:py-3 rounded font-semibold text-green-600 text-2xl mx-2 hover:bg-green-600 hover:text-white "
         >
           Login
         </Link>
         <Link
           to="/"
-          className="px-7 py-3 rounded font-semibold text-white text-xl bg-gradient-to-r from-green-400 to-green-600 hover:bg-gradient-to-r hover:from-green-600 hover:to-green-400"
+          className="p-2 lg:px-7 lg:py-3 rounded font-semibold text-white text-xl bg-gradient-to-r from-green-400 to-green-600 hover:bg-gradient-to-r hover:from-green-600 hover:to-green-400"
         >
           Sign Up
         </Link>
