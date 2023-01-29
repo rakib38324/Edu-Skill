@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRaspberryPi } from "react-icons/fa";
+import { FaRaspberryPi,FaLaptopCode,FaBusinessTime,FaHospitalUser,FaUsersCog,FaRegMap,FaChartLine,FaPenSquare } from "react-icons/fa";
 
 const Categories = () => {
   return (
@@ -26,63 +26,63 @@ const Categories = () => {
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
           <div className="flex justify-around py-4">
-            <p className="text-2xl font-semibold">Art & Design</p>
+            <p className="text-2xl font-semibold">Web Development</p>
             <p className="text-4xl">
-              <FaRaspberryPi></FaRaspberryPi>
+              <FaLaptopCode></FaLaptopCode>
             </p>
           </div>
         </div>
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
           <div className="flex justify-around py-4">
-            <p className="text-2xl font-semibold">Art & Design</p>
+            <p className="text-2xl font-semibold">Business</p>
             <p className="text-4xl">
-              <FaRaspberryPi></FaRaspberryPi>
+              <FaBusinessTime></FaBusinessTime>
             </p>
           </div>
         </div>
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
           <div className="flex justify-around py-4">
-            <p className="text-2xl font-semibold">Art & Design</p>
+            <p className="text-2xl font-semibold">Finance</p>
             <p className="text-4xl">
-              <FaRaspberryPi></FaRaspberryPi>
+              <FaHospitalUser></FaHospitalUser>
             </p>
           </div>
         </div>
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
           <div className="flex justify-around py-4">
-            <p className="text-2xl font-semibold">Art & Design</p>
+            <p className="text-2xl font-semibold">Job Expert</p>
             <p className="text-4xl">
-              <FaRaspberryPi></FaRaspberryPi>
+              <FaUsersCog></FaUsersCog>
             </p>
           </div>
         </div>
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
           <div className="flex justify-around py-4">
-            <p className="text-2xl font-semibold">Art & Design</p>
+            <p className="text-2xl font-semibold">Marketing</p>
             <p className="text-4xl">
-              <FaRaspberryPi></FaRaspberryPi>
+              <FaRegMap></FaRegMap>
             </p>
           </div>
         </div>
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
           <div className="flex justify-around py-4">
-            <p className="text-2xl font-semibold">Art & Design</p>
+            <p className="text-2xl font-semibold">Strategy</p>
             <p className="text-4xl">
-              <FaRaspberryPi></FaRaspberryPi>
+              <FaChartLine></FaChartLine>
             </p>
           </div>
         </div>
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
           <div className="flex justify-around py-4">
-            <p className="text-2xl font-semibold">Art & Design</p>
+            <p className="text-2xl font-semibold">Writing</p>
             <p className="text-4xl">
-              <FaRaspberryPi></FaRaspberryPi>
+              <FaPenSquare></FaPenSquare>
             </p>
           </div>
         </div>
