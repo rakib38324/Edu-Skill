@@ -1,6 +1,7 @@
 import React from 'react';
-import Categories from '../../Categories/Categories';
+import Footer from '../../Footer/Footer';
 import Banner from '../Banner/Banner';
+import Categories from '../Categories/Categories';
 import MiniDashboard from '../MiniDashboard/MiniDashboard';
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
       <Banner></Banner>
       <MiniDashboard></MiniDashboard>
       <Categories></Categories>
+      <Footer></Footer>
     </div>
   );
 };

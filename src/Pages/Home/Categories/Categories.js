@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRaspberryPi,FaLaptopCode,FaBusinessTime,FaHospitalUser,FaUsersCog,FaRegMap,FaChartLine,FaPenSquare } from "react-icons/fa";
+import { FaBrain,FaChalkboard,FaUserGraduate,FaDatabase,FaRaspberryPi,FaLaptopCode,FaBusinessTime,FaHospitalUser,FaUsersCog,FaRegMap,FaChartLine,FaPenSquare } from "react-icons/fa";
 
 const Categories = () => {
   return (
@@ -16,7 +16,7 @@ const Categories = () => {
       <div className="lg:grid grid-cols-4 gap-5 mt-8">
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
-          <div className="flex justify-around py-4">
+          <div className="flex justify-between p-4">
             <p className="text-2xl font-semibold">Art & Design</p>
             <p className="text-4xl ">
               <FaRaspberryPi></FaRaspberryPi>
@@ -25,7 +25,7 @@ const Categories = () => {
         </div>
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
-          <div className="flex justify-around py-4">
+          <div className="flex justify-between p-4">
             <p className="text-2xl font-semibold">Web Development</p>
             <p className="text-4xl">
               <FaLaptopCode></FaLaptopCode>
@@ -34,7 +34,7 @@ const Categories = () => {
         </div>
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
-          <div className="flex justify-around py-4">
+          <div className="flex justify-between p-4">
             <p className="text-2xl font-semibold">Business</p>
             <p className="text-4xl">
               <FaBusinessTime></FaBusinessTime>
@@ -43,7 +43,7 @@ const Categories = () => {
         </div>
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
-          <div className="flex justify-around py-4">
+          <div className="flex justify-between p-4">
             <p className="text-2xl font-semibold">Finance</p>
             <p className="text-4xl">
               <FaHospitalUser></FaHospitalUser>
@@ -52,7 +52,7 @@ const Categories = () => {
         </div>
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
-          <div className="flex justify-around py-4">
+          <div className="flex justify-between p-4">
             <p className="text-2xl font-semibold">Job Expert</p>
             <p className="text-4xl">
               <FaUsersCog></FaUsersCog>
@@ -61,7 +61,7 @@ const Categories = () => {
         </div>
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
-          <div className="flex justify-around py-4">
+          <div className="flex justify-between p-4">
             <p className="text-2xl font-semibold">Marketing</p>
             <p className="text-4xl">
               <FaRegMap></FaRegMap>
@@ -70,7 +70,7 @@ const Categories = () => {
         </div>
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
-          <div className="flex justify-around py-4">
+          <div className="flex justify-between p-4">
             <p className="text-2xl font-semibold">Strategy</p>
             <p className="text-4xl">
               <FaChartLine></FaChartLine>
@@ -79,7 +79,7 @@ const Categories = () => {
         </div>
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
-          <div className="flex justify-around py-4">
+          <div className="flex justify-between p-4">
             <p className="text-2xl font-semibold">Writing</p>
             <p className="text-4xl">
               <FaPenSquare></FaPenSquare>
@@ -88,42 +88,44 @@ const Categories = () => {
         </div>
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
-          <div className="flex justify-around py-4">
-            <p className="text-2xl font-semibold">Art & Design</p>
+          <div className="flex justify-between p-4">
+            <p className="text-2xl font-semibold">Data Science</p>
             <p className="text-4xl">
-              <FaRaspberryPi></FaRaspberryPi>
+              <FaDatabase></FaDatabase>
             </p>
           </div>
         </div>
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
-          <div className="flex justify-around py-4">
-            <p className="text-2xl font-semibold">Art & Design</p>
+          <div className="flex justify-between p-4">
+            <p className="text-2xl font-semibold">University Courses</p>
             <p className="text-4xl">
-              <FaRaspberryPi></FaRaspberryPi>
+              <FaUserGraduate></FaUserGraduate>
             </p>
           </div>
         </div>
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
-          <div className="flex justify-around py-4">
-            <p className="text-2xl font-semibold">Art & Design</p>
+          <div className="flex justify-between p-4">
+            <p className="text-2xl font-semibold">Presentation</p>
             <p className="text-4xl">
-              <FaRaspberryPi></FaRaspberryPi>
+              <FaChalkboard></FaChalkboard>
             </p>
           </div>
         </div>
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
-          <div className="flex justify-around py-4">
-            <p className="text-2xl font-semibold">Art & Design</p>
+          <div className="flex justify-between p-4">
+            <p className="text-2xl font-semibold">Personal Development</p>
             <p className="text-4xl">
-              <FaRaspberryPi></FaRaspberryPi>
+              <FaBrain></FaBrain>
             </p>
           </div>
         </div>
 
       </div>
+
+      <p className="text-2xl my-2 p-3 text-green-600 font-bold cursor-pointer">See More</p>
     </div>
   );
 };
