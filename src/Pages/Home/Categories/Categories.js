@@ -17,7 +17,7 @@ const Categories = () => {
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
           <div className="flex justify-between p-4">
-            <p className="text-2xl font-semibold">Art & Design</p>
+            <p className="text-xl font-semibold">Art & Design</p>
             <p className="text-4xl ">
               <FaRaspberryPi></FaRaspberryPi>
             </p>
@@ -26,7 +26,7 @@ const Categories = () => {
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
           <div className="flex justify-between p-4">
-            <p className="text-2xl font-semibold">Web Development</p>
+            <p className="text-xl font-semibold">Web Development</p>
             <p className="text-4xl">
               <FaLaptopCode></FaLaptopCode>
             </p>
@@ -35,7 +35,7 @@ const Categories = () => {
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
           <div className="flex justify-between p-4">
-            <p className="text-2xl font-semibold">Business</p>
+            <p className="text-xl font-semibold">Business</p>
             <p className="text-4xl">
               <FaBusinessTime></FaBusinessTime>
             </p>
@@ -44,7 +44,7 @@ const Categories = () => {
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
           <div className="flex justify-between p-4">
-            <p className="text-2xl font-semibold">Finance</p>
+            <p className="text-xl font-semibold">Finance</p>
             <p className="text-4xl">
               <FaHospitalUser></FaHospitalUser>
             </p>
@@ -53,7 +53,7 @@ const Categories = () => {
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
           <div className="flex justify-between p-4">
-            <p className="text-2xl font-semibold">Job Expert</p>
+            <p className="text-xl font-semibold">Job Expert</p>
             <p className="text-4xl">
               <FaUsersCog></FaUsersCog>
             </p>
@@ -62,7 +62,7 @@ const Categories = () => {
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
           <div className="flex justify-between p-4">
-            <p className="text-2xl font-semibold">Marketing</p>
+            <p className="text-xl font-semibold">Marketing</p>
             <p className="text-4xl">
               <FaRegMap></FaRegMap>
             </p>
@@ -71,7 +71,7 @@ const Categories = () => {
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
           <div className="flex justify-between p-4">
-            <p className="text-2xl font-semibold">Strategy</p>
+            <p className="text-xl font-semibold">Strategy</p>
             <p className="text-4xl">
               <FaChartLine></FaChartLine>
             </p>
@@ -80,7 +80,7 @@ const Categories = () => {
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
           <div className="flex justify-between p-4">
-            <p className="text-2xl font-semibold">Writing</p>
+            <p className="text-xl font-semibold">Writing</p>
             <p className="text-4xl">
               <FaPenSquare></FaPenSquare>
             </p>
@@ -89,7 +89,7 @@ const Categories = () => {
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
           <div className="flex justify-between p-4">
-            <p className="text-2xl font-semibold">Data Science</p>
+            <p className="text-xl font-semibold">Data Science</p>
             <p className="text-4xl">
               <FaDatabase></FaDatabase>
             </p>
@@ -98,7 +98,7 @@ const Categories = () => {
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
           <div className="flex justify-between p-4">
-            <p className="text-2xl font-semibold">University Courses</p>
+            <p className="text-xl font-semibold">University Courses</p>
             <p className="text-4xl">
               <FaUserGraduate></FaUserGraduate>
             </p>
@@ -107,7 +107,7 @@ const Categories = () => {
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
           <div className="flex justify-between p-4">
-            <p className="text-2xl font-semibold">Presentation</p>
+            <p className="text-xl font-semibold">Presentation</p>
             <p className="text-4xl">
               <FaChalkboard></FaChalkboard>
             </p>
@@ -116,7 +116,7 @@ const Categories = () => {
 
         <div className="border-2 hover:bg-green-300 rounded-md hover:animate-pulse">
           <div className="flex justify-between p-4">
-            <p className="text-2xl font-semibold">Personal Development</p>
+            <p className="text-xl font-semibold">Personal Development</p>
             <p className="text-4xl">
               <FaBrain></FaBrain>
             </p>
