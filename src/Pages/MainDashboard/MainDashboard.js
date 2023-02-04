@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, Outlet } from "react-router-dom";
 import {
   FaUserAlt,
   FaChalkboardTeacher,
@@ -10,8 +10,12 @@ import {
   FaUserCog,
   FaSignOutAlt
 } from "react-icons/fa";
-import Layout from "./Layout/Layout";
+
+
+
 const MainDashboard = () => {
+  
+
   return (
     <div className="mt-10">
       <div className="lg:flex lg:justify-between">
@@ -83,7 +87,7 @@ const MainDashboard = () => {
             </Link>
 
             <Link
-              to="/"
+              to="/maindashboard/profile" 
               className="p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md"
             >
               <p className="my-auto text-3xl mr-4">
@@ -93,7 +97,7 @@ const MainDashboard = () => {
             </Link>
 
             <Link
-              to="/"
+              to="/maindashboard/enroulledcourses"
               className="p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md"
             >
               <p className="my-auto text-3xl mr-4">
@@ -103,7 +107,7 @@ const MainDashboard = () => {
             </Link>
 
             <Link
-              to="/"
+              to="/maindashboard/orderhistory"
               className="p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md"
             >
               <p className="my-auto text-3xl mr-4">
@@ -111,8 +115,9 @@ const MainDashboard = () => {
               </p>
               <p className="text-xl my-auto font-semibold">Order History</p>
             </Link>
+            
             <Link
-              to="/"
+              to="/maindashboard/certificate"
               className="p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md"
             >
               <p className="my-auto text-3xl mr-4">
@@ -124,7 +129,7 @@ const MainDashboard = () => {
 
           <div className="border-t-2 border-green-200 mt-2">
             <Link
-              to="/"
+              to="/maindashboard/setting"
               className="p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md"
             >
               <p className="my-auto text-3xl mr-4">
@@ -150,7 +155,9 @@ const MainDashboard = () => {
         
 
         <div className="col-span-5">
-          <Layout></Layout>
+          
+          
+          <Outlet></Outlet>
         </div>
       </div>
     </div>

@@ -1,11 +1,11 @@
 import React from 'react';
 
-const DashBoard = () => {
+const Setting = () => {
     return (
         <div>
-            <p>Dashboard</p>
+            setting
         </div>
     );
 };
 
-export default DashBoard;
+export default Setting;
