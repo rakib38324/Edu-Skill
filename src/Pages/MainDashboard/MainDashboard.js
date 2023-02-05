@@ -6,19 +6,24 @@ import {
   FaUserGraduate,
   FaGraduationCap,
   FaTags,
-  FaCertificate,
+  FaAward,
   FaUserCog,
-  FaSignOutAlt
+  FaSignOutAlt,
 } from "react-icons/fa";
 
-
-
 const MainDashboard = () => {
-  
+  const [color, setColor] = useState("1");
+  console.log(color);
 
   return (
-    <div className="mt-10">
-      <div className="lg:flex lg:justify-between">
+    <div
+      className=" 
+      mt-10"
+    >
+      <div
+        className="lg:flex  
+        lg:justify-between"
+      >
         <div className="  lg:flex">
           <div className="lg:w-3/12 lg:flex">
             <img
@@ -32,6 +37,7 @@ const MainDashboard = () => {
             </div>
           </div>
         </div>
+
         <div className="border-2  border-green-400 p-2 rounded-lg w-2/3 mx-auto lg:w-1/6 mt-3 lg:my-auto hover:bg-green-600 text-green-500 hover:text-white">
           <Link to="/" className="flex justify-center ">
             <p className="my-auto mr-2 ">
@@ -65,98 +71,234 @@ const MainDashboard = () => {
               tabIndex={0}
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <p>Dashboard</p>
-              <p>Dashboard</p>
-              <p>Dashboard</p>
-              <p>Dashboard</p>
-              <p>Dashboard</p>
-              <p>Dashboard</p>
-              <p>Dashboard</p>
+              <div className="">
+                <div
+                  onClick={(event) =>
+                    setColor(event.target.closest(".item").id)
+                  }
+                >
+                  <div className="item" id="1">
+                    <Link
+                      to="/maindashboard/dashboard"
+                      className={`p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md ${
+                        color === "1" ? "bg-green-600 text-white" : "bg-white"
+                      } text-xl my-auto font-semibold `}
+                    >
+                      <FaChalkboardTeacher className="text-4xl mr-2"></FaChalkboardTeacher>
+                      Dashboard
+                    </Link>
+                  </div>
+
+                  <div className="item" id="2">
+                    <Link
+                      to="/maindashboard/profile"
+                      className={`p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md focus:z-10 ${
+                        color === "2" ? "bg-green-600 text-white" : "bg-white"
+                      }`}
+                    >
+                      <p className="my-auto text-3xl mr-4">
+                        <FaUserGraduate></FaUserGraduate>
+                      </p>
+                      <p className="text-xl my-auto font-semibold">
+                        My Profile
+                      </p>
+                    </Link>
+                  </div>
+
+                  <div className="item" id="3">
+                    <Link
+                      to="/maindashboard/enroulledcourses"
+                      className={`p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md focus:z-10 ${
+                        color === "3" ? "bg-green-600 text-white" : "bg-white"
+                      }`}
+                    >
+                      <p className="my-auto text-3xl mr-4">
+                        <FaGraduationCap></FaGraduationCap>
+                      </p>
+                      <p className="text-xl my-auto font-semibold">
+                        Enrolled Courses
+                      </p>
+                    </Link>
+                  </div>
+
+                  <div className="item" id="4">
+                    <Link
+                      to="/maindashboard/orderhistory"
+                      className={`p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md ${
+                        color === "4" ? "bg-green-600 text-white" : "bg-white"
+                      }`}
+                    >
+                      <p className="my-auto text-3xl mr-4">
+                        <FaTags></FaTags>
+                      </p>
+                      <p className="text-xl my-auto font-semibold">
+                        Order History
+                      </p>
+                    </Link>
+                  </div>
+
+                  <div className="item" id="5">
+                    <Link
+                      to="/maindashboard/certificate"
+                      className={`p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md ${
+                        color === "5" ? "bg-green-600 text-white" : "bg-white"
+                      }`}
+                    >
+                      <p className="my-auto text-3xl mr-4">
+                        <FaAward></FaAward>
+                      </p>
+                      <p className="text-xl my-auto font-semibold">
+                        Certificate
+                      </p>
+                    </Link>
+                  </div>
+                </div>
+
+                <div
+                  onClick={(event) =>
+                    setColor(event.target.closest(".item").id)
+                  }
+                  className="border-t-2 border-green-200 mt-2"
+                >
+                  <div className="item" id="6">
+                    <Link
+                      to="/maindashboard/setting"
+                      className={`p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md ${
+                        color === "6" ? "bg-green-600 text-white" : "bg-white"
+                      }`}
+                    >
+                      <p className="my-auto text-3xl mr-4">
+                        <FaUserCog></FaUserCog>
+                      </p>
+                      <p className="text-xl my-auto font-semibold">Setting</p>
+                    </Link>
+                  </div>
+
+                  <div>
+                    <Link
+                      to="/"
+                      className={`p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md `}
+                    >
+                      <p className="my-auto text-3xl mr-4">
+                        <FaSignOutAlt></FaSignOutAlt>
+                      </p>
+                      <p className="text-xl my-auto font-semibold">Sign Out</p>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </ul>
           </div>
 
-          <div className="hidden md:block">
-            <Link
-              to="/maindashboard/dashboard"
-              className="p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md"
+          <div className="hidden lg:block">
+            <div
+              onClick={(event) => setColor(event.target.closest(".item").id)}
             >
-              <p className="my-auto text-3xl mr-4">
-                <FaChalkboardTeacher></FaChalkboardTeacher>
-              </p>
-              <p className="text-xl my-auto font-semibold">Dashboard</p>
-            </Link>
+              <div className="item" id="1">
+                <Link
+                  to="/maindashboard/dashboard"
+                  className={`p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md ${
+                    color === "1" ? "bg-green-600 text-white" : "bg-white"
+                  } text-xl my-auto font-semibold `}
+                >
+                  <FaChalkboardTeacher className="text-4xl mr-2"></FaChalkboardTeacher>
+                  Dashboard
+                </Link>
+              </div>
 
-            <Link
-              to="/maindashboard/profile" 
-              className="p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md"
-            >
-              <p className="my-auto text-3xl mr-4">
-                <FaUserGraduate></FaUserGraduate>
-              </p>
-              <p className="text-xl my-auto font-semibold">My Profile</p>
-            </Link>
+              <div className="item" id="2">
+                <Link
+                  to="/maindashboard/profile"
+                  className={`p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md focus:z-10 ${
+                    color === "2" ? "bg-green-600 text-white" : "bg-white"
+                  }`}
+                >
+                  <p className="my-auto text-3xl mr-4">
+                    <FaUserGraduate></FaUserGraduate>
+                  </p>
+                  <p className="text-xl my-auto font-semibold">My Profile</p>
+                </Link>
+              </div>
 
-            <Link
-              to="/maindashboard/enroulledcourses"
-              className="p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md"
-            >
-              <p className="my-auto text-3xl mr-4">
-                <FaGraduationCap></FaGraduationCap>
-              </p>
-              <p className="text-xl my-auto font-semibold">Enrolled Courses</p>
-            </Link>
+              <div className="item" id="3">
+                <Link
+                  to="/maindashboard/enroulledcourses"
+                  className={`p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md focus:z-10 ${
+                    color === "3" ? "bg-green-600 text-white" : "bg-white"
+                  }`}
+                >
+                  <p className="my-auto text-3xl mr-4">
+                    <FaGraduationCap></FaGraduationCap>
+                  </p>
+                  <p className="text-xl my-auto font-semibold">
+                    Enrolled Courses
+                  </p>
+                </Link>
+              </div>
 
-            <Link
-              to="/maindashboard/orderhistory"
-              className="p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md"
+              <div className="item" id="4">
+                <Link
+                  to="/maindashboard/orderhistory"
+                  className={`p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md ${
+                    color === "4" ? "bg-green-600 text-white" : "bg-white"
+                  }`}
+                >
+                  <p className="my-auto text-3xl mr-4">
+                    <FaTags></FaTags>
+                  </p>
+                  <p className="text-xl my-auto font-semibold">Order History</p>
+                </Link>
+              </div>
+
+              <div className="item" id="5">
+                <Link
+                  to="/maindashboard/certificate"
+                  className={`p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md ${
+                    color === "5" ? "bg-green-600 text-white" : "bg-white"
+                  }`}
+                >
+                  <p className="my-auto text-3xl mr-4">
+                    <FaAward></FaAward>
+                  </p>
+                  <p className="text-xl my-auto font-semibold">Certificate</p>
+                </Link>
+              </div>
+            </div>
+
+            <div
+              onClick={(event) => setColor(event.target.closest(".item").id)}
+              className="border-t-2 border-green-200 mt-2"
             >
-              <p className="my-auto text-3xl mr-4">
-                <FaTags></FaTags>
-              </p>
-              <p className="text-xl my-auto font-semibold">Order History</p>
-            </Link>
-            
-            <Link
-              to="/maindashboard/certificate"
-              className="p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md"
-            >
-              <p className="my-auto text-3xl mr-4">
-                <FaCertificate></FaCertificate>
-              </p>
-              <p className="text-xl my-auto font-semibold">Certificate</p>
-            </Link>
+              <div className="item" id="6">
+                <Link
+                  to="/maindashboard/setting"
+                  className={`p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md ${
+                    color === "6" ? "bg-green-600 text-white" : "bg-white"
+                  }`}
+                >
+                  <p className="my-auto text-3xl mr-4">
+                    <FaUserCog></FaUserCog>
+                  </p>
+                  <p className="text-xl my-auto font-semibold">Setting</p>
+                </Link>
+              </div>
+
+              <div>
+                <Link
+                  to="/"
+                  className={`p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md `}
+                >
+                  <p className="my-auto text-3xl mr-4">
+                    <FaSignOutAlt></FaSignOutAlt>
+                  </p>
+                  <p className="text-xl my-auto font-semibold">Sign Out</p>
+                </Link>
+              </div>
+            </div>
           </div>
-
-          <div className="border-t-2 border-green-200 mt-2">
-            <Link
-              to="/maindashboard/setting"
-              className="p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md"
-            >
-              <p className="my-auto text-3xl mr-4">
-                <FaUserCog></FaUserCog>
-              </p>
-              <p className="text-xl my-auto font-semibold">Setting</p>
-            </Link>
-            <Link
-              to="/"
-              className="p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md"
-            >
-              <p className="my-auto text-3xl mr-4">
-                <FaSignOutAlt></FaSignOutAlt>
-              </p>
-              <p className="text-xl my-auto font-semibold">Sign Out</p>
-            </Link>
-          </div>
-
-          
         </div>
 
-        
-        
-
         <div className="col-span-5">
-          
-          
           <Outlet></Outlet>
         </div>
       </div>
