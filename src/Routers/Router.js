@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
+import Login from "../Pages/Login/Login";
 import Certificates from "../Pages/MainDashboard/Certificates/Certificates";
 import DashBoard from "../Pages/MainDashboard/DashBoard/DashBoard";
 import EnrolledCourses from "../Pages/MainDashboard/EnrolledCourses/EnrolledCourses";
@@ -9,6 +10,7 @@ import MainDashboard from "../Pages/MainDashboard/MainDashboard";
 import MyProfile from "../Pages/MainDashboard/MyProfile/MyProfile";
 import OrderHistory from "../Pages/MainDashboard/OrderHistory/OrderHistory";
 import Setting from "../Pages/MainDashboard/Setting/Setting";
+import SignUp from "../Pages/SignUp/SignUp";
 
 const router = createBrowserRouter([
     {
@@ -18,6 +20,14 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element: <Home></Home>
+            },
+            {
+                path:'/login',
+                element: <Login></Login>
+            },
+            {
+                path:'/signup',
+                element: <SignUp></SignUp>
             },
             
             
