@@ -4,13 +4,11 @@ import { Link } from "react-router-dom";
 import signUp from "../../Images/signUp.jpg";
 
 const SignUp = () => {
-    const {
-        register,
-        handleSubmit,
-        watch,
-        formState: { errors },
-      } = useForm();
-      const onSubmit = (data) => console.log(data);
+    const { register, handleSubmit, watch,formState: { errors }, } = useForm();
+      const onSubmit = (data,error) =>(
+         console.log(data)
+        //  console.log(error)
+         );
     return (
         <div className="lg:grid grid-cols-2">
       <div className="my-auto">
@@ -36,7 +34,7 @@ const SignUp = () => {
               />
             </div>
             {errors.name && (
-              <span className="text-red-600 font-semibold mt-2">
+              <span className="text-red-600  mt-2">
                 Please fill up Name field
               </span>
             )}
@@ -46,16 +44,14 @@ const SignUp = () => {
                 <span className=" text-xl text-green-700 font-bold">Email</span>
               </label>
               <input
-                {...register("email", { required: true })}
+                {...register("email", { required: "Email Address is required" })}
                 type="email"
                 placeholder="ray@gmail.com"
                 className="input input-bordered-2 input-accent border-green-600 w-full "
               />
             </div>
             {errors.email && (
-              <span className="text-red-600 font-semibold mt-2">
-                Please fill up Email field
-              </span>
+              <p className="text-red-600">{errors.email?.message}</p>
             )}
 
             <div className="form-control w-full mt-1">
@@ -65,16 +61,16 @@ const SignUp = () => {
                 </span>
               </label>
               <input
-                {...register("phone", { required: true })}
+                {...register("phone", { required: "Phone number is required",
+                  minLength:{ value:11, message:"Phone number minimum 11 characters or longer"}}
+                  )}
                 type="number"
                 placeholder="+8801XXXXXXXXX"
                 className="input input-bordered-2 input-accent border-green-600 w-full  "
               />
             </div>
-            {errors.phone && (
-              <span className="text-red-600 font-semibold mt-2">
-                Please fill up Phone field
-              </span>
+            {errors.password && (
+              <p className="text-red-500">{errors.phone?.message}</p>
             )}
 
             <div className="form-control w-full mt-1">
@@ -84,42 +80,35 @@ const SignUp = () => {
                 </span>
               </label>
               <input
-                {...register("password", { required: true })}
-                type="password"
-                placeholder="Enter Your Password"
+              type="password"
+              placeholder="Enter a strong password"
                 className="input input-bordered-2 input-accent border-green-600 w-full  "
-              />
+              {...register("password", {
+                required: "Password is required",
+                minLength: {
+                  value: 6,
+                  message: "Password must be 6 characters long",
+                },
+                pattern: {
+                  value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/,
+                  message:
+                    "Password must have uppercase, number and special characters",
+                },
+              })}
+              
+            />
             </div>
             {errors.password && (
-              <span className="text-red-600 font-semibold mt-2">
-                Please fill up Password field
-              </span>
+              <p className="text-red-500">{errors.password?.message}</p>
             )}
 
-            <div className="form-control w-full mt-1">
-              <label className="label">
-                <span className=" text-xl text-green-700 font-bold">
-                  Confirm Password
-                </span>
-              </label>
-              <input
-                {...register("confirmPassword", { required: true })}
-                type="password"
-                placeholder="Enter Your Confirm Password"
-                className="input input-bordered-2 input-accent border-green-600 w-full  "
-              />
-            </div>
-            {errors.confirmPassword && (
-              <span className="text-red-600 font-semibold mt-2">
-                Please fill up Confirm Password field
-              </span>
-            )}
+            
 
 
               
 
             <div className="flex justify-center">
-              <input className="p-3 border-2 border-green-300 rounded-lg bg-green-200 hover:bg-green-400 hover:text-white cursor-pointer text-lg font-semibold w-full mt-10 " type="submit" value="SIGN UP"/>
+              <input className="p-3 border-2 border-green-300 rounded-lg bg-green-400 hover:bg-green-600 hover:text-white cursor-pointer text-lg font-semibold w-full mt-10 " type="submit" value="SIGN UP"/>
             </div>
 
             <Link to='/login' className="font-semibold">Already with Edu-Skill? <span className="text-blue-500 link">Please Login</span></Link>
@@ -127,7 +116,7 @@ const SignUp = () => {
 
             <div className="flex justify-center">
         
-              <input className="p-3 mb-10 border-2 border-green-300 rounded-lg bg-green-200 hover:bg-green-400 hover:text-white cursor-pointer text-lg font-semibold w-full " type="submit"  value="CONTINUE WITH GOOGLE"/>
+              <input className="p-3 mb-10 border-2 border-green-300 rounded-lg bg-green-400 hover:bg-green-600 hover:text-white cursor-pointer text-lg font-semibold w-full " type="submit"  value="CONTINUE WITH GOOGLE"/>
             </div>
            
           </form>

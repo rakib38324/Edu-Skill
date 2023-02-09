@@ -64,7 +64,7 @@ const Login = () => {
                 <Link to='/' className="text-blue-500 font-semibold link">Forgot Password?</Link>
 
             <div className="flex justify-center">
-              <input className="p-3 border-2 border-green-300 rounded-lg bg-green-200 hover:bg-green-400 hover:text-white cursor-pointer text-lg font-semibold w-full mt-10 " type="submit" value="LOGIN"/>
+              <input className="p-3 border-2 border-green-300 rounded-lg bg-green-400 hover:bg-green-600 hover:text-white cursor-pointer text-lg font-semibold w-full mt-10 " type="submit" value="LOGIN"/>
             </div>
 
             <Link to='/signup' className="font-semibold">New to Edu-Skill? <span className="text-blue-500 link">Create Your Profile</span></Link>
@@ -72,7 +72,7 @@ const Login = () => {
 
             <div className="flex justify-center">
         
-              <input className="p-3 mb-10 border-2 border-green-300 rounded-lg bg-green-200 hover:bg-green-400 hover:text-white cursor-pointer text-lg font-semibold w-full " type="submit"  value="CONTINUE WITH GOOGLE"/>
+              <input className="p-3 mb-10 border-2 border-green-300 rounded-lg bg-green-400 hover:bg-green-600 hover:text-white cursor-pointer text-lg font-semibold w-full " type="submit"  value="CONTINUE WITH GOOGLE"/>
             </div>
            
           </form>

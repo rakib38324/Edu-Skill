@@ -153,7 +153,7 @@ const Navbar = () => {
           </li>
           
           <li>
-            <a className="hover:bg-green-300 rounded-md">Contact Us</a>
+            <Link to='/maindashboard/dashboard' className="hover:bg-green-300 rounded-md">Contact Us</Link>
           </li>
           
         </ul>
