@@ -13,58 +13,58 @@ import Setting from "../Pages/MainDashboard/Setting/Setting";
 import SignUp from "../Pages/SignUp/SignUp";
 
 const router = createBrowserRouter([
-    {
-        path:'/',
-        element: <Main></Main>,
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/signup",
+        element: <SignUp></SignUp>,
+      },
+
+      {
+        path: "/maindashboard",
+        element: <MainDashboard></MainDashboard>,
         children: [
-            {
-                path:'/',
-                element: <Home></Home>
-            },
-            {
-                path:'/login',
-                element: <Login></Login>
-            },
-            {
-                path:'/signup',
-                element: <SignUp></SignUp>
-            },
-            
-            
-        ]
-    },
-    {
-        
-            path:'/maindashboard',
-            element: <MainDashboard></MainDashboard>,
-            children:[
-                {
-                    path:'/maindashboard/dashboard',
-                    element: <DashBoard></DashBoard>
-                },
-                {
-                    path:'/maindashboard/profile',
-                    element: <MyProfile></MyProfile>
-                },
-                {
-                    path:'/maindashboard/enroulledcourses',
-                    element: <EnrolledCourses></EnrolledCourses>
-                },
-                {
-                    path:'/maindashboard/orderhistory',
-                    element: <OrderHistory></OrderHistory>
-                },
-                {
-                    path:'/maindashboard/certificate',
-                    element: <Certificates></Certificates>
-                },
-                {
-                    path:'/maindashboard/setting',
-                    element: <Setting></Setting>
-                },
-            ]
-        
-    }
-])
+          {
+            path: "/maindashboard/dashboard",
+            element: <DashBoard></DashBoard>,
+          },
+          {
+            path: "/maindashboard/profile",
+            element: <MyProfile></MyProfile>,
+          },
+          {
+            path: "/maindashboard/enroulledcourses",
+            element: <EnrolledCourses></EnrolledCourses>,
+          },
+          {
+            path: "/maindashboard/orderhistory",
+            element: <OrderHistory></OrderHistory>,
+          },
+          {
+            path: "/maindashboard/certificate",
+            element: <Certificates></Certificates>,
+          },
+          {
+            path: "/maindashboard/setting",
+            element: <Setting></Setting>,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/maindashboard",
+  },
+]);
 
 export default router;

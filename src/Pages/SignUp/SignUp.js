@@ -1,14 +1,54 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { toast } from 'react-hot-toast';
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from '../../Contexts/AuthProvider';
 import signUp from "../../Images/signUp.jpg";
+import SmallLoading from '../../Loading/SmallLoading';
 
 const SignUp = () => {
-    const { register, handleSubmit, watch,formState: { errors }, } = useForm();
-      const onSubmit = (data,error) =>(
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
+    const { register, handleSubmit,formState: { errors }, } = useForm();
+
+      const {createUser,signUpWitGoogle,loading, setLoading } = useContext(AuthContext);
+
+
+      const onSubmit = (data,error) =>{
          console.log(data)
-        //  console.log(error)
-         );
+         setLoading(true)
+       
+        createUser(data.email, data.password)
+        .then(result =>{
+          const user = result.user;
+         
+          setLoading(false)
+          navigate(from, {replace: true})
+          toast.success("Sign Up Successfully");
+          console.log(user)
+        })
+        
+        .then(error => console.log("Error: ", error))
+      };
+
+
+      const handleSignUpWithGoogle = () =>{
+        signUpWitGoogle()
+        .then(result=>{
+          setLoading(false)
+          navigate(from, { replace: true });
+          toast.success("Sign Up Successfully");
+          console.log(result.user)
+        })
+        .catch(error => {
+          setLoading(false)
+          console.log(error)
+      })
+      }
+
     return (
         <div className="lg:grid grid-cols-2">
       <div className="my-auto">
@@ -108,7 +148,10 @@ const SignUp = () => {
               
 
             <div className="flex justify-center">
-              <input className="p-3 border-2 border-green-300 rounded-lg bg-green-400 hover:bg-green-600 hover:text-white cursor-pointer text-lg font-semibold w-full mt-10 " type="submit" value="SIGN UP"/>
+
+              <button className="p-3 border-2 border-green-300 rounded-lg bg-green-400 hover:bg-green-600 hover:text-white cursor-pointer text-lg font-semibold w-full mt-10 ">{loading ? <SmallLoading></SmallLoading> : "SIGN UP"}</button>
+
+              
             </div>
 
             <Link to='/login' className="font-semibold">Already with Edu-Skill? <span className="text-blue-500 link">Please Login</span></Link>
@@ -116,7 +159,7 @@ const SignUp = () => {
 
             <div className="flex justify-center">
         
-              <input className="p-3 mb-10 border-2 border-green-300 rounded-lg bg-green-400 hover:bg-green-600 hover:text-white cursor-pointer text-lg font-semibold w-full " type="submit"  value="CONTINUE WITH GOOGLE"/>
+              <input onClick={handleSignUpWithGoogle} className="p-3 mb-10 border-2 border-green-300 rounded-lg bg-green-400 hover:bg-green-600 hover:text-white cursor-pointer text-lg font-semibold w-full " type="submit"  value="CONTINUE WITH GOOGLE"/>
             </div>
            
           </form>

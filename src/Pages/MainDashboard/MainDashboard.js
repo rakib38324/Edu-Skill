@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import {
   FaUserAlt,
   FaChalkboardTeacher,
@@ -10,10 +10,27 @@ import {
   FaUserCog,
   FaSignOutAlt,
 } from "react-icons/fa";
+import { AuthContext } from "../../Contexts/AuthProvider";
+import { toast } from "react-hot-toast";
 
 const MainDashboard = () => {
   const [color, setColor] = useState("1");
-  console.log(color);
+  // console.log(color);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        navigate(from, { replace: true });
+        toast.success("Logout Successfully");
+      })
+      .catch(() => {});
+    console.log("yes");
+  };
 
   return (
     <div
@@ -174,16 +191,17 @@ const MainDashboard = () => {
                     </Link>
                   </div>
 
-                  <div>
-                    <Link
-                      to="/"
-                      className={`p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md `}
+                  <div onClick={handleLogOut}>
+                    <button
+                      className={`p-2 mt-2 w-full flex hover:bg-green-500 hover:text-white rounded-md `}
                     >
                       <p className="my-auto text-3xl mr-4">
                         <FaSignOutAlt></FaSignOutAlt>
                       </p>
-                      <p className="text-xl my-auto font-semibold">Sign Out</p>
-                    </Link>
+                      <p className="text-xl my-auto font-semibold">
+                        Sign Out
+                      </p>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -283,17 +301,18 @@ const MainDashboard = () => {
                 </Link>
               </div>
 
-              <div>
-                <Link
-                  to="/"
-                  className={`p-2 mt-2 flex hover:bg-green-500 hover:text-white rounded-md `}
-                >
-                  <p className="my-auto text-3xl mr-4">
-                    <FaSignOutAlt></FaSignOutAlt>
-                  </p>
-                  <p className="text-xl my-auto font-semibold">Sign Out</p>
-                </Link>
-              </div>
+              <div onClick={handleLogOut}>
+                    <button
+                      className={`p-2 mt-2 w-full flex hover:bg-green-500 hover:text-white rounded-md `}
+                    >
+                      <p className="my-auto text-3xl mr-4">
+                        <FaSignOutAlt></FaSignOutAlt>
+                      </p>
+                      <p className="text-xl my-auto font-semibold">
+                        Sign Out
+                      </p>
+                    </button>
+                  </div>
             </div>
           </div>
         </div>
